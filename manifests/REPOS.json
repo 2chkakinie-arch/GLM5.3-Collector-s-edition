@@ -1,0 +1,87 @@
+{
+  "schema": "glm53-archive-repos/v1",
+  "captured_at": "2026-10-01T00:00:00Z",
+  "captured_via": "Hugging Face Hub API: GET /api/models/{repo}?expand[]=sha,lastModified,downloads,likes,usedStorage,gated,cardData,safetensors,tags",
+  "note": "revision = 上流リポジトリのコミットSHA（この時点の内容を固定する）。取得時、全リポジトリは gated=false（無認証でダウンロード可能）だった。",
+  "repos": [
+    {
+      "id": "zai-org/GLM-5.3",
+      "url": "https://huggingface.co/zai-org/GLM-5.3",
+      "revision": "aca966e4e02791568aa6a4ced368624b3d897f42",
+      "last_modified": "2026-09-04T06:41:23Z",
+      "gated": false,
+      "license": "other (license_name: glm-5.3 / GLM-5.3 License)",
+      "library": "transformers",
+      "architecture": "GlmMoeDsaForCausalLM (glm_moe_dsa)",
+      "modality": "text-generation",
+      "likes": 2018,
+      "downloads_30d": 1372510,
+      "used_storage_bytes": 755681496428,
+      "safetensors_parameters": {
+        "BF16": 2103729152,
+        "F8_E4M3": 751226191872,
+        "F32": 19456,
+        "total": 753329940480
+      },
+      "files_manifest": "manifests/zai-org__GLM-5.3.manifest.json",
+      "files": 155,
+      "weight_shards": 141,
+      "total_bytes": 755663689206,
+      "notes": "本家FP8。744B total / ~40B active MoE, 1,048,576-token context。同一リビジョンの全ファイル目録を取得済み。"
+    },
+    {
+      "id": "zai-org/GLM-5.3-BF16",
+      "url": "https://huggingface.co/zai-org/GLM-5.3-BF16",
+      "revision": "9d2398f478cab2de883137db3a36ad2c96205e24",
+      "last_modified": "2026-09-04T06:38:42Z",
+      "gated": false,
+      "license": "other (glm-5.3)",
+      "architecture": "GlmMoeDsaForCausalLM (glm_moe_dsa)",
+      "likes": 45,
+      "downloads_30d": 32847,
+      "used_storage_bytes": 1506687604850,
+      "weight_shards": 282,
+      "files_manifest": null,
+      "notes": "BF16（非可逆な原版）。約1.5TB。全ファイル目録は未取得 — `tools/snapshot_metadata.py --repo zai-org/GLM-5.3-BF16` で生成可能。"
+    },
+    {
+      "id": "zai-org/GLM-5.3-Flash",
+      "url": "https://huggingface.co/zai-org/GLM-5.3-Flash",
+      "revision": "eb9eb208eb0d988989d07a6a12d0fdeb5f52574a",
+      "last_modified": "2026-09-07T12:13:47Z",
+      "gated": false,
+      "license": "mit",
+      "architecture": "glm5_next (image-text-to-text)",
+      "modality": "マルチモーダル（テキスト・画像・動画・ファイル入力）",
+      "likes": 2627,
+      "downloads_30d": 4894946,
+      "used_storage_bytes": 656694929761,
+      "weight_shards": 62,
+      "files_manifest": null,
+      "notes": "320B total / 18B active, MIT。usedStorage は過去リビジョンを含むため、現在の配布物は約328GB（62シャード）。最終シャード model-00062-of-00062.safetensors = 1,261,584,968 B, sha256 d3087816db95f962a3a74c057b8398e1492458ecd99608f706a400f112a825c6。tokenizer.json は本家と同一（sha256 19e773648cb4e65de8660ea6365e10acca112d42a854923df93db4a6f333a82d）。"
+    },
+    {
+      "id": "zai-org/GLM-5.3-Flash-BF16",
+      "url": "https://huggingface.co/zai-org/GLM-5.3-Flash-BF16",
+      "revision": "a5b45eb41df6402735dedc900be14a42e8d5e538",
+      "last_modified": "2026-09-04T06:45:54Z",
+      "gated": false,
+      "license": "mit",
+      "architecture": "glm5_next (image-text-to-text)",
+      "likes": 65,
+      "downloads_30d": 45804,
+      "used_storage_bytes": 642672288322,
+      "weight_shards": 120,
+      "files_manifest": null,
+      "notes": "MIT。約642.7GB。全ファイル目録は未取得 — `tools/snapshot_metadata.py --repo zai-org/GLM-5.3-Flash-BF16` で生成可能。"
+    }
+  ],
+  "related_distributions": [
+    {
+      "id": "unsloth/GLM-5.3-GGUF",
+      "type": "derived-quantization",
+      "url": "https://huggingface.co/unsloth/GLM-5.3-GGUF",
+      "notes": "派生（非可逆）。原版から再生成可能なため、アーカイブ優先度は低い。最小 UD-IQ2_M で約239GB。"
+    }
+  ]
+}
