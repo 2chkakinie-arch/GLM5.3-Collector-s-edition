@@ -1,0 +1,9 @@
+# 重み本体（巨大・GitHubには置けない。tools/ で取得して別ストレージへ）
+archive/
+*.safetensors
+*.gguf
+*.torrent
+__pycache__/
+*.pyc
+verify*.json
+.aria2_input.txt
